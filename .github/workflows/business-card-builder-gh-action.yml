@@ -17,9 +17,4 @@ jobs:
         uses: SophiaSaiada/business-card-builder-gh-action@master
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
-
-      - name: Call On-Done Webhook
-        uses: joelwmale/webhook-action@6b83612926bbb8cdb65da3c1bedc9c08dea5810b
-        env:
-          WEBHOOK_URL: ${{ secrets.ON_PUBLISH_DONE_WEBHOOK_URL }}
-          data: ${{ github.repository }}
+          on-done-webhook-url: ${{ secrets.ON_PUBLISH_DONE_WEBHOOK_URL }}
